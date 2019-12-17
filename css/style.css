@@ -6,11 +6,13 @@
 #generate {
     background: #af0808;
     border-radius: 30px;
+ 
 }
 
 #copy {
     background: #c0c7cf;
     border-radius: 30px;
+    /* outline:none; */
 }
 
 .border {
@@ -18,7 +20,8 @@
 }
 
 #password{
-    border: 3px #c0c7cf dotted;
+    border: 3px #c0c7cf dashed;
+    border-radius: 6px;
     height: 120px;
     resize:none;
 }
