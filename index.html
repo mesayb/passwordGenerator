@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="container pb-5 shadow">
-            <div class="pl-4 pr-4">
+            <div class="p l-4 pr-4">
                 <div class="row">
                     <div class="col pb-2 mt-4 mb-3 border-bottom display-3">
                         <h2>Generate a Password</h2>
@@ -30,18 +30,19 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 pb-2 mb-3 w-100 border-bottom ">
-                        <textarea readonly id="password" class="w-100 text-center text-monospace pt-3"
+                        <textarea readonly id="password" class="w-100 text-center text-monospace p-3"
                             placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6 w-auto clearfix">
-                        <button class="btn btn-sm p-3 text-white font-size-3 font-weight-bold float-left"
-                            id="generate">Generate Password</button>
+                        <button class="btn btn-sm p-3 text-white font-size-3 font-weight-bold float-left" id="generate"
+                            onclick="generatePassword()">Generate Password</button>
                     </div>
 
                     <div class="col-xs-6 col-sm-6 col-md-6 w-auto clearfix">
-                        <button class="btn btn-sm p-3 text-white font-weight-bold float-right" id="copy">Copy to Clipboard</button>
+                        <button class="btn btn-sm p-3 text-white font-weight-bold float-right" id="copy"
+                            onclick="copyText()">Copy to Clipboard</button>
                     </div>
                 </div>
 
@@ -49,11 +50,7 @@
         </div>
     </div>
 
-
-
-
-
-
+    <script src="js/jsSource.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
