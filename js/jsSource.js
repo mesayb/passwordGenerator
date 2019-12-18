@@ -15,8 +15,7 @@ function generatePassword() {
         passwordLength = parseInt(passwordLength);
         if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
             lengthSatisfied = false;
-            alert(
-                "Password length must be a numeric value between '8' and '128' character long \n Please enter password length again ");
+            alert("Password length must be a numeric value between '8' and '128' character long \n ->Please enter password length again ");
         } else {
             lengthSatisfied = true;
             passwordLengthRemain = passwordLength;
@@ -34,10 +33,13 @@ function generatePassword() {
             passwordLengthRemain = passwordLengthRemain - specialCharLength;
 
             if (passwordLengthRemain < 0) {
-                alert("you have exceeded the password length you initially requested!!!");
                 lengthSatisfied = false;
                 //reset the password length remaining to original
                 passwordLengthRemain = passwordLengthRemain + specialCharLength;
+
+                alert(`you have exceeded the password length you initially requested!!! \n 
+                ->Please enter a value <= '${passwordLengthRemain}'`);
+
 
             } else
             if (passwordLengthRemain >= 0) {
@@ -57,10 +59,12 @@ function generatePassword() {
             passwordLengthRemain = passwordLengthRemain - numericCharLength;
 
             if (passwordLengthRemain < 0) {
-                alert("you have exceeded the password length you initially requested!!!");
                 lengthSatisfied = false;
                 //reset the password length remaining to original
                 passwordLengthRemain = passwordLengthRemain + numericCharLength;
+
+                alert(`you have exceeded the password length you initially requested!!! \n 
+                ->Please enter a value <= '${passwordLengthRemain}'`);
 
             } else
             if (passwordLengthRemain >= 0) {
@@ -78,11 +82,13 @@ function generatePassword() {
             upperCaseCharLength = parseInt(upperCaseCharLength);
             passwordLengthRemain = passwordLengthRemain - upperCaseCharLength;
 
-            if (passwordLengthRemain < 0) {
-                alert("you have exceeded the password length you initially requested!!!");
+            if (passwordLengthRemain < 0 || isNaN(passwordLength)) {
                 lengthSatisfied = false;
                 //reset the password length remaining to original
                 passwordLengthRemain = passwordLengthRemain + upperCaseCharLength;
+
+                alert(`you have exceeded the password length you initially requested!!! \n 
+                ->Please enter a value <= '${passwordLengthRemain}'`);
 
             } else
             if (passwordLengthRemain >= 0) {
