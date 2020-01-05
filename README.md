@@ -1,6 +1,7 @@
 # Password Generator
 
 Password Generator generates a secure password for a User
+click the link to view the published site https://mesayb.github.io/passwordGenerator/
 
 ## Installation
 
